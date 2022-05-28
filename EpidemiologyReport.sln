@@ -7,11 +7,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EpidemiologyReport", "Epide
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{FF77E5D5-B7FA-4761-91A6-883AD5B7467D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpedimiologyReport.Services", "EpedimiologyReport.Services\EpedimiologyReport.Services.csproj", "{F459C667-03B6-4A19-9DAE-85555C305576}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EpedimiologyReport.Services", "EpedimiologyReport.Services\EpedimiologyReport.Services.csproj", "{F459C667-03B6-4A19-9DAE-85555C305576}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{947907BE-08BC-4DFC-9C2F-BF52315B53B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpedimiologyReport.Tests", "EpedimiologyReport.Tests\EpedimiologyReport.Tests.csproj", "{F565D507-627A-4D17-AA62-255A8F91878D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EpedimiologyReport.Tests", "EpedimiologyReport.Tests\EpedimiologyReport.Tests.csproj", "{F565D507-627A-4D17-AA62-255A8F91878D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logs", "Logs", "{5F82D23B-52CB-4A5D-BD0F-C7D3B94A857D}"
+	ProjectSection(SolutionItems) = preProject
+		Log.txt = Log.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

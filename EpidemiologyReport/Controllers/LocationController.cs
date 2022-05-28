@@ -12,17 +12,19 @@ namespace EpidemiologyReport.Controllers
     {
 
        private readonly ILocationRepository _locationRepository;
-        public LocationController(ILocationRepository locationRepository)
+        private readonly ILogger _logger;
+        public LocationController(ILocationRepository locationRepository, ILogger<LocationController> logger)
         {
-            
+
             this._locationRepository = locationRepository;
+            _logger = logger;
         }
-        
+
         [HttpGet]
      
-        public async Task<List<Locations>> Get([FromQuery]  LocationSearch search=null)
+        public async Task<List<Locations>> Get([FromQuery]  LocationSearch search)
         {
-          
+            _logger.LogInformation("enter to Get Location Function city:" + search.City);
            return await this._locationRepository.Get(search);
         }
 

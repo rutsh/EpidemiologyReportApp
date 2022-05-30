@@ -26,3 +26,15 @@
 2022-05-28 23:58:00.646 +03:00 [INF] Executed action EpidemiologyReport.Controllers.LocationController.Get (EpidemiologyReport) in 19.2069ms
 2022-05-28 23:58:00.649 +03:00 [INF] Executed endpoint 'EpidemiologyReport.Controllers.LocationController.Get (EpidemiologyReport)'
 2022-05-28 23:58:00.650 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5155/api/Location?City=Jerusalem - - - 200 - application/json;+charset=utf-8 41.1257ms
+2022-05-30 15:30:55.508 +03:00 [INF] Now listening on: http://localhost:5155
+2022-05-30 15:30:55.538 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-30 15:30:55.539 +03:00 [INF] Hosting environment: Development
+2022-05-30 15:30:55.541 +03:00 [INF] Content root path: C:\Users\user1\Documents\Projects\EpidemiologyReport\EpidemiologyReport\
+2022-05-30 15:30:56.279 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5155/swagger/index.html - -
+2022-05-30 15:30:56.578 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5155/_framework/aspnetcore-browser-refresh.js - -
+2022-05-30 15:30:56.578 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5155/_vs/browserLink - -
+2022-05-30 15:30:56.582 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5155/swagger/index.html - - - 200 - text/html;charset=utf-8 307.1327ms
+2022-05-30 15:30:56.582 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5155/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 4.0094ms
+2022-05-30 15:30:56.604 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5155/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.9388ms
+2022-05-30 15:30:56.763 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5155/swagger/v1/swagger.json - -
+2022-05-30 15:30:56.889 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5155/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 125.9904ms

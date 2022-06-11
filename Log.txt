@@ -1,40 +1,12 @@
-2022-05-28 23:57:36.643 +03:00 [INF] Now listening on: http://localhost:5155
-2022-05-28 23:57:36.683 +03:00 [INF] Application started. Press Ctrl+C to shut down.
-2022-05-28 23:57:36.686 +03:00 [INF] Hosting environment: Development
-2022-05-28 23:57:36.687 +03:00 [INF] Content root path: C:\Users\user1\Documents\Projects\EpidemiologyReport\EpidemiologyReport\
-2022-05-28 23:57:37.442 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5155/swagger/index.html - -
-2022-05-28 23:57:37.829 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5155/_framework/aspnetcore-browser-refresh.js - -
-2022-05-28 23:57:37.830 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5155/_vs/browserLink - -
-2022-05-28 23:57:37.834 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5155/swagger/index.html - - - 200 - text/html;charset=utf-8 398.8753ms
-2022-05-28 23:57:37.835 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5155/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 6.7268ms
-2022-05-28 23:57:37.878 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5155/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.1077ms
-2022-05-28 23:57:38.045 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5155/swagger/v1/swagger.json - -
-2022-05-28 23:57:38.219 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5155/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 173.6187ms
-2022-05-28 23:57:49.066 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5155/api/Patient/000000018 - -
-2022-05-28 23:57:49.078 +03:00 [INF] Executing endpoint 'EpidemiologyReport.Controllers.PatientController.Get (EpidemiologyReport)'
-2022-05-28 23:57:49.114 +03:00 [INF] Route matched with {action = "Get", controller = "Patient"}. Executing controller action with signature System.Threading.Tasks.Task`1[EpedimiologyReport.Services.Models.Patient] Get(System.String) on controller EpidemiologyReport.Controllers.PatientController (EpidemiologyReport).
-2022-05-28 23:57:49.370 +03:00 [INF] enter to Get Function id:000000018
-2022-05-28 23:57:49.381 +03:00 [INF] Executing ObjectResult, writing value of type 'EpedimiologyReport.Services.Models.Patient'.
-2022-05-28 23:57:49.398 +03:00 [INF] Executed action EpidemiologyReport.Controllers.PatientController.Get (EpidemiologyReport) in 270.3698ms
-2022-05-28 23:57:49.404 +03:00 [INF] Executed endpoint 'EpidemiologyReport.Controllers.PatientController.Get (EpidemiologyReport)'
-2022-05-28 23:57:49.406 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5155/api/Patient/000000018 - - - 200 - application/json;+charset=utf-8 340.1092ms
-2022-05-28 23:58:00.609 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5155/api/Location?City=Jerusalem - -
-2022-05-28 23:58:00.612 +03:00 [INF] Executing endpoint 'EpidemiologyReport.Controllers.LocationController.Get (EpidemiologyReport)'
-2022-05-28 23:58:00.621 +03:00 [INF] Route matched with {action = "Get", controller = "Location"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[EpedimiologyReport.Services.Models.Locations]] Get(EpedimiologyReport.Services.Models.LocationSearch) on controller EpidemiologyReport.Controllers.LocationController (EpidemiologyReport).
-2022-05-28 23:58:00.638 +03:00 [INF] enter to Get Location Function city:Jerusalem
-2022-05-28 23:58:00.644 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[EpedimiologyReport.Services.Models.Locations, EpedimiologyReport.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
-2022-05-28 23:58:00.646 +03:00 [INF] Executed action EpidemiologyReport.Controllers.LocationController.Get (EpidemiologyReport) in 19.2069ms
-2022-05-28 23:58:00.649 +03:00 [INF] Executed endpoint 'EpidemiologyReport.Controllers.LocationController.Get (EpidemiologyReport)'
-2022-05-28 23:58:00.650 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5155/api/Location?City=Jerusalem - - - 200 - application/json;+charset=utf-8 41.1257ms
-2022-05-30 15:30:55.508 +03:00 [INF] Now listening on: http://localhost:5155
-2022-05-30 15:30:55.538 +03:00 [INF] Application started. Press Ctrl+C to shut down.
-2022-05-30 15:30:55.539 +03:00 [INF] Hosting environment: Development
-2022-05-30 15:30:55.541 +03:00 [INF] Content root path: C:\Users\user1\Documents\Projects\EpidemiologyReport\EpidemiologyReport\
-2022-05-30 15:30:56.279 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5155/swagger/index.html - -
-2022-05-30 15:30:56.578 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5155/_framework/aspnetcore-browser-refresh.js - -
-2022-05-30 15:30:56.578 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5155/_vs/browserLink - -
-2022-05-30 15:30:56.582 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5155/swagger/index.html - - - 200 - text/html;charset=utf-8 307.1327ms
-2022-05-30 15:30:56.582 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5155/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 4.0094ms
-2022-05-30 15:30:56.604 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5155/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.9388ms
-2022-05-30 15:30:56.763 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5155/swagger/v1/swagger.json - -
-2022-05-30 15:30:56.889 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5155/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 125.9904ms
+[19:25:02 INF Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5155
+[19:25:02 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+[19:25:02 INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+[19:25:02 INF Microsoft.Hosting.Lifetime] Content root path: C:\Users\user1\Documents\Projects\EpidemiologyReport\EpidemiologyReport\
+[19:25:13 INF EpidemiologyReport.Controllers.LocationController] enter to Get Location Function city:
+[19:25:26 INF EpidemiologyReport.Controllers.PatientController] enter to Get Function id:000000018
+[21:45:10 INF Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5155
+[21:45:10 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+[21:45:10 INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+[21:45:10 INF Microsoft.Hosting.Lifetime] Content root path: C:\Users\user1\Documents\Projects\EpidemiologyReport\EpidemiologyReport\
+[21:45:17 INF EpidemiologyReport.Controllers.LocationController] enter to Get Location Function city:
+[21:45:30 INF EpidemiologyReport.Controllers.PatientController] enter to Get Function id:000000018

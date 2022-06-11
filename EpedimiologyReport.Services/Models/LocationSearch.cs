@@ -8,6 +8,6 @@ namespace EpedimiologyReport.Services.Models
 {
     public class LocationSearch
     {
-        public string City { get; set; }
+        public string? City { get; set; }
     }
 }

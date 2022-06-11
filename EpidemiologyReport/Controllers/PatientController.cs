@@ -29,9 +29,9 @@ namespace EpidemiologyReport.Controllers
        
         [HttpPost]
         public async Task Save([FromBody] Patient p)
-        {
-            _logger.LogInformation("enter to Post Function id:" + p);
-            await _patientRepository.Save(p);
+        {           
+                _logger.LogInformation("enter to Post Function id:" + p);
+                await _patientRepository.Save(p);                        
         }
 
 

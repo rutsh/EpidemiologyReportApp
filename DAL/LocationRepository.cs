@@ -27,7 +27,7 @@ namespace DAL
             }
            if(locationSearch!=null)
                 return locations.FindAll(l => l.City.Equals(locationSearch.City)).ToList();
-           return locations;
+            return locations;
         }
     }
 }

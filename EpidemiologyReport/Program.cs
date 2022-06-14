@@ -19,7 +19,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Host.UseSerilog((ctx, lc) => lc
-    .MinimumLevel.Debug()
+    //.MinimumLevel.Debug()
     .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
     .MinimumLevel.Override("Microsoft.AspNetCore", LogEventLevel.Warning)
     .Enrich.FromLogContext()
@@ -38,7 +38,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpLogging();
 app.UseAuthorization();
-
+app.UseMiddleware<ErrorLoggingMiddleware>();
 app.MapControllers();
 
 app.Run();

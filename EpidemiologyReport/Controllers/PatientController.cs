@@ -31,7 +31,8 @@ namespace EpidemiologyReport.Controllers
         public async Task Save([FromBody] Patient p)
         {           
                 _logger.LogInformation("enter to Post Function id:" + p);
-                await _patientRepository.Save(p);                        
+                await _patientRepository.Save(p);
+            throw new Exception("Some error yo");
         }
 
 

@@ -20,7 +20,7 @@ namespace EpidemiologyReport.Controllers
 
 
         [HttpGet("{id}")]
-        public async  Task<Patient> Get(string id)
+        public async  Task<List<Locations>> Get(string id)
         {
             _logger.LogInformation("enter to Get Function id:" + id);
             return await _patientRepository.Get(id);
@@ -32,7 +32,7 @@ namespace EpidemiologyReport.Controllers
         {           
                 _logger.LogInformation("enter to Post Function id:" + p);
                 await _patientRepository.Save(p);
-            throw new Exception("Some error yo");
+           // throw new Exception("Some error yo");
         }
 
 

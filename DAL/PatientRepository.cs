@@ -1,5 +1,8 @@
-﻿using EpedimiologyReport.Services;
+﻿using AutoMapper;
+using DAL.Models;
+using EpedimiologyReport.Services;
 using EpedimiologyReport.Services.Models;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -11,27 +14,32 @@ namespace DAL
 {
     public class PatientRepository : IPatientRepository
     {
-        private const string _fileUrl = "C:\\Users\\user1\\Documents\\Projects\\EpidemiologyReport\\DAL\\Data\\data.json";
-        List<Patient> patients = new List<Patient>();
-        public PatientRepository()
+
+        private readonly ReportContext _context;
+        List<Models.Patient> patients = new List<Models.Patient>();
+        List<Models.Location> locations = new List<Models.Location>();
+        IMapper mapper;
+        public PatientRepository(ReportContext context)
         {
-            using (StreamReader reader = System.IO.File.OpenText(_fileUrl))
+            _context = context;
+            patients = _context.Patients.ToList();
+            locations = _context.Locations.ToList();
+            var config = new MapperConfiguration(cfg =>
             {
-                patients = JsonConvert.DeserializeObject<List<Patient>>(reader.ReadToEnd());
+                cfg.AddProfile<AutoMapperProfile>();
 
-            }
+            });
+            mapper = config.CreateMapper();
         }
-        public async Task<Patient> Get(string id)
+        public async Task<List<Locations>> Get(string id)
         {
-            Patient p = patients.FirstOrDefault(p => p.PatientId.Equals(id));           
-            return p;
+            return mapper.Map<List<Location>,List<Locations>>(locations.FindAll(l => l.PatientId.Equals(id)));           
         }
 
-        public async Task Save(Patient patient)
+        public async Task Save(EpedimiologyReport.Services.Models.Patient patient)
         {
-            patients.Add(patient);
-            string json = JsonConvert.SerializeObject(patients);
-            System.IO.File.WriteAllText(_fileUrl, json);
+            _context.Patients.Add(mapper.Map< EpedimiologyReport.Services.Models.Patient, Models.Patient>(patient));
+            _context.SaveChangesAsync();
         }
     }
 }

@@ -1,8 +1,10 @@
 
 
 using DAL;
+using DAL.Models;
 using EpedimiologyReport.Services;
 using EpidemiologyReport.Controllers;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Events;
 using Serilog.Templates;
@@ -13,13 +15,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<ILocationRepository, LocationRepository>();
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
-
+builder.Services.AddDbContext<ReportContext>(options =>
+options.UseSqlServer("Server =DESKTOP-6S5T98O\\SQLEXPRESS; Database = Report; Trusted_Connection = True; "));
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Host.UseSerilog((ctx, lc) => lc
-    //.MinimumLevel.Debug()
     .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
     .MinimumLevel.Override("Microsoft.AspNetCore", LogEventLevel.Warning)
     .Enrich.FromLogContext()
@@ -29,7 +30,7 @@ builder.Host.UseSerilog((ctx, lc) => lc
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

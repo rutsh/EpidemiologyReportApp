@@ -1,4 +1,6 @@
 ﻿
+using AutoMapper;
+using DAL.Models;
 using EpedimiologyReport.Services;
 using EpedimiologyReport.Services.Models;
 using Newtonsoft.Json;
@@ -7,27 +9,29 @@ namespace DAL
 {
     public class LocationRepository : ILocationRepository
     {
-        private const string _fileUrl = "C:\\Users\\user1\\Documents\\Projects\\EpidemiologyReport\\DAL\\Data\\data.json";
-        List<Patient> patients = new List<Patient>();
-        public LocationRepository()
-        {
-            using (StreamReader reader = System.IO.File.OpenText(_fileUrl))
-            {
-                patients = JsonConvert.DeserializeObject<List<Patient>>(reader.ReadToEnd());
+        private readonly ReportContext _context;
+        
+        List<Models.Location> locations = new List<Models.Location>();
+        IMapper mapper;
 
-            }
+        public LocationRepository(ReportContext context)
+        {
+            
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<AutoMapperProfile>();
+
+            });
+            mapper = config.CreateMapper();
+            _context = context;
+            locations = _context.Locations.ToList();
         }
        
         public async Task<List<Locations>> Get(LocationSearch locationSearch)
         {
-            List<Locations> locations = new List<Locations>();
-            foreach (Patient p in patients)
-            {
-               locations.AddRange(p.locations.ToList());
-            }
            if(locationSearch!=null)
-                return locations.FindAll(l => l.City.Equals(locationSearch.City)).ToList();
-            return locations;
+                return mapper.Map<List<Location>,List<Locations>>(  locations.FindAll(l => l.City.Equals(locationSearch.City)).ToList());
+            return mapper.Map<List<Location>, List<Locations>>(locations);
         }
     }
 }

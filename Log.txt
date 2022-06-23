@@ -4,3 +4,174 @@
 [21:45:30 INF EpidemiologyReport.Controllers.PatientController] enter to Get Function id:000000018
 [17:17:06 INF EpidemiologyReport.Controllers.PatientController] enter to Get Function id:000000018
 [17:17:06 ERR ErrorLoggingMiddleware] The following error happened: Some error yo
+[19:47:36 INF Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5155
+[19:47:36 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+[19:47:36 INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+[19:47:36 INF Microsoft.Hosting.Lifetime] Content root path: C:\Users\user1\Documents\Projects\EpidemiologyReport\EpidemiologyReport\
+[20:06:24 INF Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5155
+[20:06:24 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+[20:06:24 INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+[20:06:24 INF Microsoft.Hosting.Lifetime] Content root path: C:\Users\user1\Documents\Projects\EpidemiologyReport\EpidemiologyReport\
+[20:06:42 INF Microsoft.EntityFrameworkCore.Infrastructure] Entity Framework Core 6.0.6 initialized 'ReportContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.6' with options: None
+[20:06:43 INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (45ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[PatientId]
+FROM [Patient] AS [p]
+[20:06:43 INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [l].[City], [l].[EndDate], [l].[ExactLocation], [l].[PatientId], [l].[StartDate]
+FROM [Locations] AS [l]
+[20:06:44 INF EpidemiologyReport.Controllers.PatientController] enter to Get Function id:000000015
+[20:07:03 INF Microsoft.EntityFrameworkCore.Infrastructure] Entity Framework Core 6.0.6 initialized 'ReportContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.6' with options: None
+[20:07:03 INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[PatientId]
+FROM [Patient] AS [p]
+[20:07:03 INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [l].[City], [l].[EndDate], [l].[ExactLocation], [l].[PatientId], [l].[StartDate]
+FROM [Locations] AS [l]
+[20:07:03 INF EpidemiologyReport.Controllers.PatientController] enter to Post Function id:EpedimiologyReport.Services.Models.Patient
+[20:07:03 ERR ErrorLoggingMiddleware] The following error happened: Some error yo
+[20:07:03 INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (176ms) [Parameters=[@p0='?' (Size = 9)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Patient] ([PatientId])
+VALUES (@p0);
+[20:07:03 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.Exception: Some error yo
+   at EpidemiologyReport.Controllers.PatientController.Save(Patient p) in C:\Users\user1\Documents\Projects\EpidemiologyReport\EpidemiologyReport\Controllers\PatientController.cs:line 35
+   at lambda_method36(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at ErrorLoggingMiddleware.Invoke(HttpContext context) in C:\Users\user1\Documents\Projects\EpidemiologyReport\EpidemiologyReport\ErrorLoggingMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[20:07:38 INF Microsoft.EntityFrameworkCore.Infrastructure] Entity Framework Core 6.0.6 initialized 'ReportContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.6' with options: None
+[20:07:38 INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[PatientId]
+FROM [Patient] AS [p]
+[20:07:38 INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [l].[City], [l].[EndDate], [l].[ExactLocation], [l].[PatientId], [l].[StartDate]
+FROM [Locations] AS [l]
+[20:07:38 INF EpidemiologyReport.Controllers.PatientController] enter to Post Function id:EpedimiologyReport.Services.Models.Patient
+[20:07:39 ERR ErrorLoggingMiddleware] The following error happened: The instance of entity type 'Patient' cannot be tracked because another instance with the same key value for {'PatientId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+[20:07:39 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The instance of entity type 'Patient' cannot be tracked because another instance with the same key value for {'PatientId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at DAL.PatientRepository.Save(Patient patient) in C:\Users\user1\Documents\Projects\EpidemiologyReport\DAL\PatientRepository.cs:line 46
+   at EpidemiologyReport.Controllers.PatientController.Save(Patient p) in C:\Users\user1\Documents\Projects\EpidemiologyReport\EpidemiologyReport\Controllers\PatientController.cs:line 34
+   at lambda_method36(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at ErrorLoggingMiddleware.Invoke(HttpContext context) in C:\Users\user1\Documents\Projects\EpidemiologyReport\EpidemiologyReport\ErrorLoggingMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[20:08:02 INF Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5155
+[20:08:02 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+[20:08:02 INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+[20:08:02 INF Microsoft.Hosting.Lifetime] Content root path: C:\Users\user1\Documents\Projects\EpidemiologyReport\EpidemiologyReport\
+[20:08:14 INF Microsoft.EntityFrameworkCore.Infrastructure] Entity Framework Core 6.0.6 initialized 'ReportContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.6' with options: None
+[20:08:15 INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (42ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[PatientId]
+FROM [Patient] AS [p]
+[20:08:15 INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [l].[City], [l].[EndDate], [l].[ExactLocation], [l].[PatientId], [l].[StartDate]
+FROM [Locations] AS [l]
+[20:08:15 INF EpidemiologyReport.Controllers.PatientController] enter to Post Function id:EpedimiologyReport.Services.Models.Patient
+[20:08:15 ERR ErrorLoggingMiddleware] The following error happened: The instance of entity type 'Patient' cannot be tracked because another instance with the same key value for {'PatientId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+[20:08:16 ERR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The instance of entity type 'Patient' cannot be tracked because another instance with the same key value for {'PatientId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at DAL.PatientRepository.Save(Patient patient) in C:\Users\user1\Documents\Projects\EpidemiologyReport\DAL\PatientRepository.cs:line 46
+   at EpidemiologyReport.Controllers.PatientController.Save(Patient p) in C:\Users\user1\Documents\Projects\EpidemiologyReport\EpidemiologyReport\Controllers\PatientController.cs:line 34
+   at lambda_method7(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at ErrorLoggingMiddleware.Invoke(HttpContext context) in C:\Users\user1\Documents\Projects\EpidemiologyReport\EpidemiologyReport\ErrorLoggingMiddleware.cs:line 17
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[20:08:40 INF Microsoft.EntityFrameworkCore.Infrastructure] Entity Framework Core 6.0.6 initialized 'ReportContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.6' with options: None
+[20:08:40 INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[PatientId]
+FROM [Patient] AS [p]
+[20:08:40 INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [l].[City], [l].[EndDate], [l].[ExactLocation], [l].[PatientId], [l].[StartDate]
+FROM [Locations] AS [l]
+[20:08:40 INF EpidemiologyReport.Controllers.PatientController] enter to Post Function id:EpedimiologyReport.Services.Models.Patient
+[20:10:34 INF Microsoft.Hosting.Lifetime] Now listening on: http://localhost:5155
+[20:10:34 INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+[20:10:34 INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+[20:10:34 INF Microsoft.Hosting.Lifetime] Content root path: C:\Users\user1\Documents\Projects\EpidemiologyReport\EpidemiologyReport\
+[20:10:53 INF Microsoft.EntityFrameworkCore.Infrastructure] Entity Framework Core 6.0.6 initialized 'ReportContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.6' with options: None
+[20:10:54 INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[PatientId]
+FROM [Patient] AS [p]
+[20:10:54 INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [l].[City], [l].[EndDate], [l].[ExactLocation], [l].[PatientId], [l].[StartDate]
+FROM [Locations] AS [l]
+[20:10:54 INF EpidemiologyReport.Controllers.PatientController] enter to Post Function id:EpedimiologyReport.Services.Models.Patient
+[20:11:33 INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1,967ms) [Parameters=[@p0='?' (Size = 9)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Patient] ([PatientId])
+VALUES (@p0);
+[20:11:33 ERR Microsoft.AspNetCore.Server.Kestrel] Connection id "0HMIL7D4FDBS3", Request id "0HMIL7D4FDBS3:00000004": An unhandled exception was thrown by the application.
+System.InvalidOperationException: There is already an open DataReader associated with this Connection which must be closed first.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.ValidateConnectionForExecute(SqlCommand command)
+   at Microsoft.Data.SqlClient.SqlInternalTransaction.Rollback()
+   at Microsoft.Data.SqlClient.SqlTransaction.Dispose(Boolean disposing)
+   at System.Data.Common.DbTransaction.DisposeAsync()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalTransaction.DisposeAsync()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.ResetStateAsync(Boolean disposeDbConnection)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.<DisposeAsync>g__Await|22_0(Int32 i, ValueTask vt, List`1 toDispose)
+   at Microsoft.EntityFrameworkCore.DbContext.DisposeAsync()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.<DisposeAsync>g__Await|22_0(Int32 i, ValueTask vt, List`1 toDispose)
+   at Microsoft.AspNetCore.Http.Features.RequestServicesFeature.<DisposeAsync>g__Awaited|9_0(RequestServicesFeature servicesFeature, ValueTask vt)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.<FireOnCompleted>g__ProcessEvents|227_0(HttpProtocol protocol, Stack`1 events)
+[20:12:12 INF Microsoft.EntityFrameworkCore.Infrastructure] Entity Framework Core 6.0.6 initialized 'ReportContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.6' with options: None
+[20:12:12 INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [l].[City], [l].[EndDate], [l].[ExactLocation], [l].[PatientId], [l].[StartDate]
+FROM [Locations] AS [l]
+[20:12:12 INF EpidemiologyReport.Controllers.LocationController] enter to Get Location Function city:Jerusalem

@@ -9,7 +9,7 @@ namespace EpedimiologyReport.Services
 {
     public interface IPatientRepository
     {
-        Task<Patient> Get(string id);
+        Task<List<Locations>> Get(string id);
 
         Task Save(Patient patient);
     }

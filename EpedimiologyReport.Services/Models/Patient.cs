@@ -10,17 +10,14 @@ namespace EpedimiologyReport.Services.Models
     {
         public string PatientId { get; set; }
 
-        public List<Locations> locations { get; set; }
-
         public Patient()
         {
 
         }
 
-        public Patient(string patientId, List<Locations> locations)
+        public Patient(string patientId)
         {
-            this.PatientId = patientId;
-            this.locations = locations;            
+            this.PatientId = patientId;          
         }
     }
 }
